@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aux Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+
+<div id="p1" class="page active">
+  <h1>Who's on aux?</h1>
+  <input id="nameIn" placeholder="Your name" maxlength="15">
+  <button id="joinBtn">Join</button>
+</div>
+
+<div id="p2" class="page">
+  <h2 id="auxName"></h2>
+  <div id="countdown" style="font-weight:bold; color:#ffeb3b; margin:10px;"></div>
+
+  <div id="carousel"></div>
+
+  <div id="auxControls" style="display:none; margin:20px; text-align:center;">
+    <h3>Remix Controls</h3>
+    <label>Volume: <span id="volValue">50</span>%</label><br>
+    <input type="range" id="volumeSlider" min="0" max="100" value="50" style="width:200px;">
+    <br><br>
+    <button id="reverbBtn" class="effect-btn">Reverb</button>
+    <button id="echoBtn"   class="effect-btn">Echo</button>
+    <button id="bassBtn"   class="effect-btn">Bass Boost</button>
+    <button id="resetFxBtn"class="effect-btn">Reset</button>
+    <br><br>
+    <button id="pauseBtn"  class="effect-btn">Pause</button>
+    <button id="resumeBtn" class="effect-btn">Resume</button>
+  </div>
+  
+  <div id="voteArea">
+    <button id="startBtn">Start Voting (30s)</button>
+  </div>
+
+  <div id="votingPhase" style="display:none; margin:20px; text-align:center;"></div>
+
+  <div id="rateArea" style="display:none; text-align:center;">
+    <h3>Rate the Aux (30s)</h3>
+    <button id="keepBtn">Keep</button>
+    <button id="passBtn" class="btn-red">Pass</button>
+  </div>
+
+  <div id="result" style="margin:20px; font-size:18px; font-weight:bold; color:#ffeb3b;"></div>
+
+  <div class="users">
+    <h3>Players</h3>
+    <div id="usersList"></div>
+  </div>
+
+  <div id="now" class="now"></div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
