@@ -1,39 +1,452 @@
-{
-  "songs": [
-    {
-      "id": 1,
-      "title": "Blinding Lights",
-      "artist": "The Weeknd",
-      "coverImage": "/image_file/smile.png",
-      "audioUrl": "/audio_file/bad_romance.mp3"
-    },
-    {
-      "id": 2,
-      "title": "Levitating",
-      "artist": "Dua Lipa",
-      "coverImage": "/image_file/smile.png",
-      "audioUrl": "/audio_file/bad_romance.mp3"
-    },
-    {
-      "id": 3,
-      "title": "Peaches",
-      "artist": "Justin Bieber",
-      "coverImage": "/image_file/smile.png",
-      "audioUrl": "/audio_file/bad_romance.mp3"
-    },
-    {
-      "id": 4,
-      "title": "Good 4 U",
-      "artist": "Olivia Rodrigo",
-      "coverImage": "/image_file/smile.png",
-      "audioUrl": "/audio_file/bad_romance.mp3"
-    },
-    {
-      "id": 5,
-      "title": "Stay",
-      "artist": "The Kid LAROI",
-      "coverImage": "/image_file/smile.png",
-      "audioUrl": "/audio_file/bad_romance.mp3"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "title": "Love Will Keep Us Together",
+    "artist": "Captain & Tennille",
+    "year": 1975,
+    "duration": "3:20",
+    "albumArt": "/images/albums/1975-love-will-keep-us-together.jpg",
+    "audioFile": "/audio/1975-love-will-keep-us-together.mp3"
+  },
+  {
+    "id": 2,
+    "title": "Silly Love Songs",
+    "artist": "Wings",
+    "year": 1976,
+    "duration": "2:56",
+    "albumArt": "/images/albums/1976-silly-love-songs.jpg",
+    "audioFile": "/audio/1976-silly-love-songs.mp3"
+  },
+  {
+    "id": 3,
+    "title": "Tonight's the Night",
+    "artist": "Rod Stewart",
+    "year": 1977,
+    "duration": "3:56",
+    "albumArt": "/images/albums/1977-tonights-the-night.jpg",
+    "audioFile": "/audio/1977-tonights-the-night.mp3"
+  },
+  {
+    "id": 4,
+    "title": "Shadow Dancing",
+    "artist": "Andy Gibb",
+    "year": 1978,
+    "duration": "4:24",
+    "albumArt": "/images/albums/1978-shadow-dancing.jpg",
+    "audioFile": "/audio/1978-shadow-dancing.mp3"
+  },
+  {
+    "id": 5,
+    "title": "My Sharona",
+    "artist": "The Knack",
+    "year": 1979,
+    "duration": "4:54",
+    "albumArt": "/images/albums/1979-my-sharona.jpg",
+    "audioFile": "/audio/1979-my-sharona.mp3"
+  },
+  {
+    "id": 6,
+    "title": "Call Me",
+    "artist": "Blondie",
+    "year": 1980,
+    "duration": "3:32",
+    "albumArt": "/images/albums/1980-call-me.jpg",
+    "audioFile": "/audio/1980-call-me.mp3"
+  },
+  {
+    "id": 7,
+    "title": "Bette Davis Eyes",
+    "artist": "Kim Carnes",
+    "year": 1981,
+    "duration": "3:48",
+    "albumArt": "/images/albums/1981-bette-davis-eyes.jpg",
+    "audioFile": "/audio/1981-bette-davis-eyes.mp3"
+  },
+  {
+    "id": 8,
+    "title": "Physical",
+    "artist": "Olivia Newton-John",
+    "year": 1982,
+    "duration": "3:42",
+    "albumArt": "/images/albums/1982-physical.jpg",
+    "audioFile": "/audio/1982-physical.mp3"
+  },
+  {
+    "id": 9,
+    "title": "Every Breath You Take",
+    "artist": "The Police",
+    "year": 1983,
+    "duration": "4:13",
+    "albumArt": "/images/albums/1983-every-breath-you-take.jpg",
+    "audioFile": "/audio/1983-every-breath-you-take.mp3"
+  },
+  {
+    "id": 10,
+    "title": "When Doves Cry",
+    "artist": "Prince",
+    "year": 1984,
+    "duration": "5:54",
+    "albumArt": "/images/albums/1984-when-doves-cry.jpg",
+    "audioFile": "/audio/1984-when-doves-cry.mp3"
+  },
+  {
+    "id": 11,
+    "title": "Careless Whisper",
+    "artist": "Wham!",
+    "year": 1985,
+    "duration": "5:00",
+    "albumArt": "/images/albums/1985-careless-whisper.jpg",
+    "audioFile": "/audio/1985-careless-whisper.mp3"
+  },
+  {
+    "id": 12,
+    "title": "That's What Friends Are For",
+    "artist": "Dionne & Friends",
+    "year": 1986,
+    "duration": "4:16",
+    "albumArt": "/images/albums/1986-thats-what-friends-are-for.jpg",
+    "audioFile": "/audio/1986-thats-what-friends-are-for.mp3"
+  },
+  {
+    "id": 13,
+    "title": "Walk Like an Egyptian",
+    "artist": "The Bangles",
+    "year": 1987,
+    "duration": "3:22",
+    "albumArt": "/images/albums/1987-walk-like-an-egyptian.jpg",
+    "audioFile": "/audio/1987-walk-like-an-egyptian.mp3"
+  },
+  {
+    "id": 14,
+    "title": "Faith",
+    "artist": "George Michael",
+    "year": 1988,
+    "duration": "3:15",
+    "albumArt": "/images/albums/1988-faith.jpg",
+    "audioFile": "/audio/1988-faith.mp3"
+  },
+  {
+    "id": 15,
+    "title": "Look Away",
+    "artist": "Chicago",
+    "year": 1989,
+    "duration": "4:00",
+    "albumArt": "/images/albums/1989-look-away.jpg",
+    "audioFile": "/audio/1989-look-away.mp3"
+  },
+  {
+    "id": 16,
+    "title": "Hold On",
+    "artist": "Wilson Phillips",
+    "year": 1990,
+    "duration": "4:12",
+    "albumArt": "/images/albums/1990-hold-on.jpg",
+    "audioFile": "/audio/1990-hold-on.mp3"
+  },
+  {
+    "id": 17,
+    "title": "(Everything I Do) I Do It for You",
+    "artist": "Bryan Adams",
+    "year": 1991,
+    "duration": "6:33",
+    "albumArt": "/images/albums/1991-everything-i-do.jpg",
+    "audioFile": "/audio/1991-everything-i-do.mp3"
+  },
+  {
+    "id": 18,
+    "title": "End of the Road",
+    "artist": "Boyz II Men",
+    "year": 1992,
+    "duration": "5:52",
+    "albumArt": "/images/albums/1992-end-of-the-road.jpg",
+    "audioFile": "/audio/1992-end-of-the-road.mp3"
+  },
+  {
+    "id": 19,
+    "title": "I Will Always Love You",
+    "artist": "Whitney Houston",
+    "year": 1993,
+    "duration": "4:31",
+    "albumArt": "/images/albums/1993-i-will-always-love-you.jpg",
+    "audioFile": "/audio/1993-i-will-always-love-you.mp3"
+  },
+  {
+    "id": 20,
+    "title": "I'll Make Love to You",
+    "artist": "Boyz II Men",
+    "year": 1994,
+    "duration": "4:22",
+    "albumArt": "/images/albums/1994-ill-make-love-to-you.jpg",
+    "audioFile": "/audio/1994-ill-make-love-to-you.mp3"
+  },
+  {
+    "id": 21,
+    "title": "Gangsta's Paradise",
+    "artist": "Coolio ft. L.V.",
+    "year": 1995,
+    "duration": "4:04",
+    "albumArt": "/images/albums/1995-gangstas-paradise.jpg",
+    "audioFile": "/audio/1995-gangstas-paradise.mp3"
+  },
+  {
+    "id": 22,
+    "title": "Macarena",
+    "artist": "Los Del Rio",
+    "year": 1996,
+    "duration": "4:13",
+    "albumArt": "/images/albums/1996-macarena.jpg",
+    "audioFile": "/audio/1996-macarena.mp3"
+  },
+  {
+    "id": 23,
+    "title": "Candle in the Wind",
+    "artist": "Elton John",
+    "year": 1997,
+    "duration": "3:33",
+    "albumArt": "/images/albums/1997-candle-in-the-wind.jpg",
+    "audioFile": "/audio/1997-candle-in-the-wind.mp3"
+  },
+  {
+    "id": 24,
+    "title": "Too Close",
+    "artist": "Next",
+    "year": 1998,
+    "duration": "4:25",
+    "albumArt": "/images/albums/1998-too-close.jpg",
+    "audioFile": "/audio/1998-too-close.mp3"
+  },
+  {
+    "id": 25,
+    "title": "Believe",
+    "artist": "Cher",
+    "year": 1999,
+    "duration": "3:59",
+    "albumArt": "/images/albums/1999-believe.jpg",
+    "audioFile": "/audio/1999-believe.mp3"
+  },
+  {
+    "id": 26,
+    "title": "Breathe",
+    "artist": "Faith Hill",
+    "year": 2000,
+    "duration": "4:10",
+    "albumArt": "/images/albums/2000-breathe.jpg",
+    "audioFile": "/audio/2000-breathe.mp3"
+  },
+  {
+    "id": 27,
+    "title": "Hanging by a Moment",
+    "artist": "Lifehouse",
+    "year": 2001,
+    "duration": "3:36",
+    "albumArt": "/images/albums/2001-hanging-by-a-moment.jpg",
+    "audioFile": "/audio/2001-hanging-by-a-moment.mp3"
+  },
+  {
+    "id": 28,
+    "title": "How You Remind Me",
+    "artist": "Nickelback",
+    "year": 2002,
+    "duration": "3:43",
+    "albumArt": "/images/albums/2002-how-you-remind-me.jpg",
+    "audioFile": "/audio/2002-how-you-remind-me.mp3"
+  },
+  {
+    "id": 29,
+    "title": "In Da Club",
+    "artist": "50 Cent",
+    "year": 2003,
+    "duration": "3:13",
+    "albumArt": "/images/albums/2003-in-da-club.jpg",
+    "audioFile": "/audio/2003-in-da-club.mp3"
+  },
+  {
+    "id": 30,
+    "title": "Yeah!",
+    "artist": "Usher ft. Lil Jon & Ludacris",
+    "year": 2004,
+    "duration": "4:10",
+    "albumArt": "/images/albums/2004-yeah.jpg",
+    "audioFile": "/audio/2004-yeah.mp3"
+  },
+  {
+    "id": 31,
+    "title": "We Belong Together",
+    "artist": "Mariah Carey",
+    "year": 2005,
+    "duration": "3:21",
+    "albumArt": "/images/albums/2005-we-belong-together.jpg",
+    "audioFile": "/audio/2005-we-belong-together.mp3"
+  },
+  {
+    "id": 32,
+    "title": "Bad Day",
+    "artist": "Daniel Powter",
+    "year": 2006,
+    "duration": "3:54",
+    "albumArt": "/images/albums/2006-bad-day.jpg",
+    "audioFile": "/audio/2006-bad-day.mp3"
+  },
+  {
+    "id": 33,
+    "title": "Irreplaceable",
+    "artist": "Beyoncé",
+    "year": 2007,
+    "duration": "3:47",
+    "albumArt": "/images/albums/2007-irreplaceable.jpg",
+    "audioFile": "/audio/2007-irreplaceable.mp3"
+  },
+  {
+    "id": 34,
+    "title": "Low",
+    "artist": "Flo Rida ft. T-Pain",
+    "year": 2008,
+    "duration": "3:50",
+    "albumArt": "/images/albums/2008-low.jpg",
+    "audioFile": "/audio/2008-low.mp3"
+  },
+  {
+    "id": 35,
+    "title": "Boom Boom Pow",
+    "artist": "The Black Eyed Peas",
+    "year": 2009,
+    "duration": "4:11",
+    "albumArt": "/images/albums/2009-boom-boom-pow.jpg",
+    "audioFile": "/audio/2009-boom-boom-pow.mp3"
+  },
+  {
+    "id": 36,
+    "title": "TiK ToK",
+    "artist": "Kesha",
+    "year": 2010,
+    "duration": "3:19",
+    "albumArt": "/images/albums/2010-tik-tok.jpg",
+    "audioFile": "/audio/2010-tik-tok.mp3"
+  },
+  {
+    "id": 37,
+    "title": "Rolling in the Deep",
+    "artist": "Adele",
+    "year": 2011,
+    "duration": "3:48",
+    "albumArt": "/images/albums/2011-rolling-in-the-deep.jpg",
+    "audioFile": "/audio/2011-rolling-in-the-deep.mp3"
+  },
+  {
+    "id": 38,
+    "title": "Somebody That I Used to Know",
+    "artist": "Gotye ft. Kimbra",
+    "year": 2012,
+    "duration": "4:04",
+    "albumArt": "/images/albums/2012-somebody-that-i-used-to-know.jpg",
+    "audioFile": "/audio/2012-somebody-that-i-used-to-know.mp3"
+  },
+  {
+    "id": 39,
+    "title": "Thrift Shop",
+    "artist": "Macklemore & Ryan Lewis ft. Wanz",
+    "year": 2013,
+    "duration": "3:55",
+    "albumArt": "/images/albums/2013-thrift-shop.jpg",
+    "audioFile": "/audio/2013-thrift-shop.mp3"
+  },
+  {
+    "id": 40,
+    "title": "Happy",
+    "artist": "Pharrell Williams",
+    "year": 2014,
+    "duration": "3:52",
+    "albumArt": "/images/albums/2014-happy.jpg",
+    "audioFile": "/audio/2014-happy.mp3"
+  },
+  {
+    "id": 41,
+    "title": "Uptown Funk",
+    "artist": "Mark Ronson ft. Bruno Mars",
+    "year": 2015,
+    "duration": "4:30",
+    "albumArt": "/images/albums/2015-uptown-funk.jpg",
+    "audioFile": "/audio/2015-uptown-funk.mp3"
+  },
+  {
+    "id": 42,
+    "title": "Love Yourself",
+    "artist": "Justin Bieber",
+    "year": 2016,
+    "duration": "3:53",
+    "albumArt": "/images/albums/2016-love-yourself.jpg",
+    "audioFile": "/audio/2016-love-yourself.mp3"
+  },
+  {
+    "id": 43,
+    "title": "Shape of You",
+    "artist": "Ed Sheeran",
+    "year": 2017,
+    "duration": "3:53",
+    "albumArt": "/images/albums/2017-shape-of-you.jpg",
+    "audioFile": "/audio/2017-shape-of-you.mp3"
+  },
+  {
+    "id": 44,
+    "title": "God's Plan",
+    "artist": "Drake",
+    "year": 2018,
+    "duration": "3:18",
+    "albumArt": "/images/albums/2018-gods-plan.jpg",
+    "audioFile": "/audio/2018-gods-plan.mp3"
+  },
+  {
+    "id": 45,
+    "title": "Old Town Road",
+    "artist": "Lil Nas X ft. Billy Ray Cyrus",
+    "year": 2019,
+    "duration": "2:37",
+    "albumArt": "/images/albums/2019-old-town-road.jpg",
+    "audioFile": "/audio/2019-old-town-road.mp3"
+  },
+  {
+    "id": 46,
+    "title": "Blinding Lights",
+    "artist": "The Weeknd",
+    "year": 2020,
+    "duration": "3:20",
+    "albumArt": "/images/albums/2020-blinding-lights.jpg",
+    "audioFile": "/audio/2020-blinding-lights.mp3"
+  },
+  {
+    "id": 47,
+    "title": "Levitating",
+    "artist": "Dua Lipa",
+    "year": 2021,
+    "duration": "3:23",
+    "albumArt": "/images/albums/2021-levitating.jpg",
+    "audioFile": "/audio/2021-levitating.mp3"
+  },
+  {
+    "id": 48,
+    "title": "Heat Waves",
+    "artist": "Glass Animals",
+    "year": 2022,
+    "duration": "3:58",
+    "albumArt": "/images/albums/2022-heat-waves.jpg",
+    "audioFile": "/audio/2022-heat-waves.mp3"
+  },
+  {
+    "id": 49,
+    "title": "Last Night",
+    "artist": "Morgan Wallen",
+    "year": 2023,
+    "duration": "2:52",
+    "albumArt": "/images/albums/2023-last-night.jpg",
+    "audioFile": "/audio/2023-last-night.mp3"
+  },
+  {
+    "id": 50,
+    "title": "Lose Control",
+    "artist": "Teddy Swims",
+    "year": 2024,
+    "duration": "3:30",
+    "albumArt": "/images/albums/2024-lose-control.jpg",
+    "audioFile": "/audio/2024-lose-control.mp3"
+  }
+]
