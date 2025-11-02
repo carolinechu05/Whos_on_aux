@@ -52,11 +52,23 @@ const gameState = {
   playing: false,
   rating: false,
   aux: null,
-  players: {}
+  players: {},
+  currentSongs: [] // Track current song selection
 };
 
 const votes = new Map();
 const voteCounts = new Map();
+
+// Helper: select 5 random songs
+function selectRandomSongs() {
+  const shuffled = [...music].sort(() => Math.random() - 0.5);
+  gameState.currentSongs = shuffled.slice(0, 5);
+  // Broadcast new songs to all connected clients
+  io.to(gameState.room).emit('init', { music: gameState.currentSongs });
+}
+
+// Initialize songs when server starts
+selectRandomSongs();
 
 // Helper: recompute vote counts
 function recomputeCounts() {
@@ -102,7 +114,8 @@ io.on('connection', socket => {
     }
     await db.write();
 
-    socket.emit('init', { music });
+    // Send current song selection to new player
+    socket.emit('init', { music: gameState.currentSongs });
     broadcastState();
   });
 
@@ -142,7 +155,7 @@ io.on('connection', socket => {
     broadcastState();
   });
 
-  // ---- PLAY SONG ---- *** THIS WAS MISSING! ***
+  // ---- PLAY SONG ----
   socket.on('play', song => {
     if (gameState.aux?.id !== id) return;
     io.to(gameState.room).emit('now', { song, timestamp: Date.now() });
@@ -270,6 +283,10 @@ function startNewVoting() {
   gameState.aux = null;
   votes.clear(); voteCounts.clear();
   for (const p of Object.values(gameState.players)) p.voted = false;
+  
+  // Refresh song selection for new round
+  selectRandomSongs();
+  
   broadcastState();
   io.to(gameState.room).emit('countdown', { phase: 'voting', seconds: 30 });
   setTimeout(endVoting, 30_000);
