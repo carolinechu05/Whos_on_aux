@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>AUX Wheel — Cyber Blue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <header class="topbar">
+    <strong>AUX WHEEL</strong>
+    <div class="ctl">
+      <button class="btn" id="start">Start</button>
+      <label>Vol <input id="vol" type="range" min="0" max="100" value="80"></label>
+      <span id="volV">80%</span>
+    </div>
+  </header>
+
+  <main class="stage">
+    <div class="wheel-wrap">
+      <div class="disk" aria-hidden="true"></div>
+      <div class="wheel" id="wheel"></div>
+    </div>
+
+    <!-- Center hub (song info) -->
+    <div class="hub">
+      <div class="avatar">JA</div>
+      <div class="song" id="songName">—</div>
+      <div class="artist" id="artistName">—</div>
+      <div class="by" id="byLine">Selected by —</div>
+    </div>
+  </main>
+
+  <!-- Rating emojis -->
+  <footer class="dock">
+    <div class="dock-title">Rate the AUX Holder</div>
+    <div class="faces" id="rateDock">
+      <button data-score="1" aria-label="1/5">😖</button>
+      <button data-score="2" aria-label="2/5">😕</button>
+      <button data-score="3" aria-label="3/5">😐</button>
+      <button data-score="4" aria-label="4/5">🙂</button>
+      <button data-score="5" aria-label="5/5">🤩</button>
+    </div>
+  </footer>
+
+  <script>
+    // --- demo songs ---
+    const songs = [
+      { title:"Silly Love Songs",      artist:"Wings",              coverImage:"./image_file/1976-silly-love-songs.jpg",  by:"Jane" },
+      { title:"Tonight’s The Night",   artist:"Rod Stewart",        coverImage:"./image_file/1977-tonights-the-night.jpg", by:"Ryo" },
+      { title:"Shadow Dancing",        artist:"Andy Gibb",          coverImage:"./image_file/1978-shadow-dancing.jpg",    by:"Yuna" },
+      { title:"My Sharona",            artist:"The Knack",          coverImage:"./image_file/1979-my-sharona.jpg",        by:"Jane" },
+      { title:"Call Me",               artist:"Blondie",            coverImage:"./image_file/1980-call-me.jpg",           by:"Ryo" },
+      { title:"Bette Davis Eyes",      artist:"Kim Carnes",         coverImage:"./image_file/1981-bette-davis-eyes.jpg",  by:"Jane" },
+      { title:"Physical",              artist:"Olivia Newton-John", coverImage:"./image_file/1982-physical.jpg",          by:"Yuna" },
+      { title:"Every Breath You Take", artist:"The Police",         coverImage:"./image_file/1983-every-breath-you-take.jpg", by:"Jane" },
+      { title:"When Doves Cry",        artist:"Prince",             coverImage:"./image_file/1984-when-doves-cry.jpg",    by:"Ryo" },
+      { title:"Careless Whisper",      artist:"George Michael",     coverImage:"./image_file/1985-careless-whisper.jpg",  by:"Yuna" }
+    ];
+
+    // --- Elements ---
+    const wheel = document.getElementById('wheel');
+    const song  = document.getElementById('songName');
+    const artist= document.getElementById('artistName');
+    const by    = document.getElementById('byLine');
+    const vol   = document.getElementById('vol');
+    const volV  = document.getElementById('volV');
+
+    // --- Rotating wheel frames counter-rotate to stay upright ---
+    const N = songs.length, step = 360 / N;
+
+    function setCenter(s){
+      song.textContent   = s.title;
+      artist.textContent = s.artist;
+      by.textContent     = `Selected by ${s.by}`;
+    }
+
+    function buildWheel(active=0){
+      wheel.innerHTML = '';
+      for (let i = 0; i < N; i++){
+        const a = step * i;
+        const tile = document.createElement('div');
+        tile.className = 'tile' + (i===active ? ' active' : '');
+        tile.style.setProperty('--a', a + 'deg');
+        tile.innerHTML = `
+          <div class="frame">
+            <img src="${songs[i].coverImage}" alt="">
+          </div>`;
+        tile.addEventListener('click', ()=> {
+          [...wheel.children].forEach(el=>el.classList.remove('active'));
+          tile.classList.add('active');
+          setCenter(songs[i]);
+        });
+        wheel.appendChild(tile);
+      }
+      setCenter(songs[active]);
+    }
+
+    // init
+    buildWheel(0);
+    vol.addEventListener('input', e=> volV.textContent = `${e.target.value}%`);
+  </script>
+</body>
+</html>
